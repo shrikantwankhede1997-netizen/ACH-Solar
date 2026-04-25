@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACH Solar – Rooftop Solar in Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Display:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════════════════
+   MATERIAL YOU · M3 LIGHT SCHEME · Seed: Amber
+   ══════════════════════════════════════════════════ */
+:root {
+  --md-primary:                    #8B5000;
+  --md-on-primary:                 #FFFFFF;
+  --md-primary-container:          #FFDDB0;
+  --md-on-primary-container:       #2C1600;
+
+  --md-secondary:                  #715B42;
+  --md-on-secondary:               #FFFFFF;
+  --md-secondary-container:        #FDE0BB;
+  --md-on-secondary-container:     #281807;
+
+  --md-tertiary:                   #53672A;
+  --md-on-tertiary:                #FFFFFF;
+  --md-tertiary-container:         #D6EE96;
+  --md-on-tertiary-container:      #162000;
+
+  --md-background:                 #FFF8F4;
+  --md-on-background:              #201B13;
+  --md-surface:                    #FFF8F4;
+  --md-on-surface:                 #201B13;
+  --md-surface-variant:            #F0E0CF;
+  --md-on-surface-variant:         #4E4539;
+
+  --md-surface-container-lowest:   #FFFFFF;
+  --md-surface-container-low:      #FBF2E8;
+  --md-surface-container:          #F5EADD;
+  --md-surface-container-high:     #EFE4D7;
+  --md-surface-container-highest:  #E9DED1;
+
+  --md-outline:                    #817567;
+  --md-outline-variant:            #D1C4B4;
+
+  --md-inverse-surface:            #362E23;
+  --md-inverse-on-surface:         #FAF0E4;
+  --md-inverse-primary:            #FFB951;
+
+  --shape-sm:   8px;
+  --shape-md:   12px;
+  --shape-lg:   16px;
+  --shape-xl:   28px;
+  --shape-full: 9999px;
+
+  --elev-1: 0 1px 2px rgba(0,0,0,.07), 0 1px 3px 1px rgba(0,0,0,.05);
+  --elev-2: 0 1px 2px rgba(0,0,0,.07), 0 2px 6px 2px rgba(0,0,0,.06);
+  --elev-3: 0 4px 8px 3px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.07);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--md-background);
+  color: var(--md-on-background);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px 0 16px; height: 64px;
+  background: rgba(255,248,244,.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--md-outline-variant);
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Google Sans', sans-serif; font-weight: 700; font-size: 1.2rem;
+  color: var(--md-on-surface); text-decoration: none;
+}
+.logo-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--md-primary-container);
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.logo em { font-style: normal; color: var(--md-primary); }
+
+.nav-links { display: flex; gap: 2px; list-style: none; }
+.nav-links a {
+  color: var(--md-on-surface-variant); text-decoration: none;
+  font-family: 'Google Sans', sans-serif; font-size: .875rem; font-weight: 500;
+  padding: 8px 16px; border-radius: var(--shape-full);
+  transition: background .18s, color .18s;
+}
+.nav-links a:hover { background: var(--md-surface-container); color: var(--md-primary); }
+
+.nav-cta {
+  background: var(--md-primary); color: var(--md-on-primary);
+  font-family: 'Google Sans', sans-serif; font-weight: 500; font-size: .875rem;
+  padding: 10px 24px; border-radius: var(--shape-full); border: none;
+  cursor: pointer; transition: box-shadow .2s, filter .2s; text-decoration: none;
+}
+.nav-cta:hover { filter: brightness(1.1); box-shadow: var(--elev-2); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--md-surface-container-lowest);
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 60px;
+  padding: 100px 80px 64px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content:''; position:absolute;
+  width:700px; height:700px; border-radius:50%;
+  background: radial-gradient(circle, var(--md-primary-container) 0%, transparent 65%);
+  top:-160px; right:-160px; opacity:.5; pointer-events:none;
+}
+.hero::after {
+  content:''; position:absolute;
+  width:340px; height:340px; border-radius:50%;
+  background: radial-gradient(circle, var(--md-tertiary-container) 0%, transparent 70%);
+  bottom:-60px; left:-60px; opacity:.45; pointer-events:none;
+}
+
+.hero-content { position:relative; z-index:1; }
+
+.hero-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--md-primary-container); color: var(--md-on-primary-container);
+  padding: 6px 14px 6px 10px; border-radius: var(--shape-full);
+  font-family:'Google Sans',sans-serif; font-size:.8rem; font-weight:500;
+  margin-bottom:22px; letter-spacing:.02em;
+  animation: fadeUp .5s ease both;
+}
+.chip-dot { width:8px; height:8px; border-radius:50%; background:var(--md-primary); }
+
+.hero h1 {
+  font-family:'Google Sans Display',sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  font-weight:700; line-height:1.15; letter-spacing:-.02em;
+  color: var(--md-on-surface); margin-bottom:18px;
+  animation: fadeUp .5s .08s ease both;
+}
+.hero h1 .accent { color: var(--md-primary); }
+
+.hero > .hero-content > p {
+  font-size:1.0625rem; line-height:1.75;
+  color: var(--md-on-surface-variant); margin-bottom:32px; max-width:460px;
+  animation: fadeUp .5s .16s ease both;
+}
+
+.hero-btns {
+  display:flex; gap:12px; flex-wrap:wrap;
+  animation: fadeUp .5s .24s ease both;
+}
+.btn-filled {
+  background:var(--md-primary); color:var(--md-on-primary);
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.9375rem;
+  padding:12px 28px; border-radius:var(--shape-full); border:none;
+  cursor:pointer; transition:filter .2s, box-shadow .2s; text-decoration:none; display:inline-block;
+}
+.btn-filled:hover { filter:brightness(1.1); box-shadow:var(--elev-2); }
+
+.btn-tonal {
+  background:var(--md-secondary-container); color:var(--md-on-secondary-container);
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.9375rem;
+  padding:12px 28px; border-radius:var(--shape-full); border:none;
+  cursor:pointer; transition:filter .2s; text-decoration:none; display:inline-block;
+}
+.btn-tonal:hover { filter:brightness(.95); }
+
+/* Stats row */
+.hero-stats {
+  display:flex; margin-top:44px; border-radius:var(--shape-xl);
+  border:1px solid var(--md-outline-variant); overflow:hidden;
+  box-shadow: var(--elev-1); animation: fadeUp .5s .32s ease both;
+}
+.hs {
+  flex:1; padding:18px 20px; text-align:center;
+  background:var(--md-surface-container-lowest);
+  border-right:1px solid var(--md-outline-variant);
+}
+.hs:last-child { border-right:none; }
+.hs-n {
+  font-family:'Google Sans Display',sans-serif;
+  font-size:1.65rem; font-weight:700; color:var(--md-primary); line-height:1;
+}
+.hs-l { font-size:.76rem; color:var(--md-on-surface-variant); margin-top:4px; }
+
+/* Hero visual */
+.hero-visual {
+  position:relative; z-index:1; display:flex; flex-direction:column; gap:14px;
+  animation: fadeUp .5s .1s ease both;
+}
+.hv-main {
+  background:var(--md-primary-container);
+  border-radius:var(--shape-xl); padding:36px;
+}
+.hv-main-icon { font-size:4.5rem; line-height:1; margin-bottom:14px; }
+.hv-main h3 {
+  font-family:'Google Sans Display',sans-serif; font-size:1.25rem; font-weight:700;
+  color:var(--md-on-primary-container); margin-bottom:4px;
+}
+.hv-main p { font-size:.9rem; color:var(--md-primary); font-weight:500; }
+
+.hv-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.hv-mini {
+  background:var(--md-surface-container-lowest);
+  border:1px solid var(--md-outline-variant);
+  border-radius:var(--shape-lg); padding:20px;
+  box-shadow:var(--elev-1);
+}
+.hv-mini .mi { font-size:1.4rem; margin-bottom:10px; }
+.hv-mini h4 {
+  font-family:'Google Sans',sans-serif; font-size:.875rem; font-weight:500;
+  color:var(--md-on-surface); margin-bottom:4px;
+}
+.hv-mini p { font-size:.78rem; color:var(--md-on-surface-variant); line-height:1.55; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ── SECTION BASE ── */
+section { padding: 88px 80px; }
+.eyebrow {
+  font-family:'Google Sans',sans-serif; font-size:.8rem; font-weight:500;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--md-primary); margin-bottom:10px;
+}
+.stitle {
+  font-family:'Google Sans Display',sans-serif;
+  font-size:clamp(1.75rem,3vw,2.5rem); font-weight:700;
+  line-height:1.2; letter-spacing:-.015em;
+  color:var(--md-on-surface); margin-bottom:14px;
+}
+.ssub { font-size:1.0625rem; color:var(--md-on-surface-variant); line-height:1.7; max-width:520px; }
+
+/* ── BENEFITS ── */
+.benefits { background:var(--md-surface-container-low); }
+.benefits-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px;
+}
+.bc {
+  background:var(--md-surface-container-lowest); border-radius:var(--shape-xl);
+  padding:28px 24px; box-shadow:var(--elev-1);
+  border:1px solid transparent;
+  transition:box-shadow .25s, transform .25s, border-color .25s;
+}
+.bc:hover { box-shadow:var(--elev-3); transform:translateY(-3px); border-color:var(--md-outline-variant); }
+.bc-icon {
+  width:48px; height:48px; border-radius:var(--shape-md);
+  background:var(--md-primary-container);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.35rem; margin-bottom:18px;
+}
+.bc h3 {
+  font-family:'Google Sans',sans-serif; font-size:1.0625rem; font-weight:500;
+  color:var(--md-on-surface); margin-bottom:8px;
+}
+.bc p { font-size:.875rem; color:var(--md-on-surface-variant); line-height:1.65; }
+
+/* ── HOW IT WORKS ── */
+.how { background:var(--md-surface-container-lowest); }
+.steps {
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:0; margin-top:52px; position:relative;
+}
+.steps::before {
+  content:''; position:absolute;
+  top:31px; left:calc(10% + 10px); right:calc(10% + 10px);
+  height:2px;
+  background:linear-gradient(90deg, var(--md-primary-container), var(--md-outline-variant) 50%, var(--md-tertiary-container));
+}
+.step { text-align:center; padding:0 10px; }
+.step-n {
+  width:62px; height:62px; border-radius:50%;
+  background:var(--md-primary-container);
+  border:3px solid var(--md-surface-container-lowest);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Google Sans',sans-serif; font-size:1.2rem; font-weight:700;
+  color:var(--md-on-primary-container);
+  margin:0 auto 16px; position:relative; z-index:1;
+  box-shadow:var(--elev-1);
+}
+.step h4 {
+  font-family:'Google Sans',sans-serif; font-size:.875rem; font-weight:500;
+  color:var(--md-on-surface); margin-bottom:6px;
+}
+.step p { font-size:.78rem; color:var(--md-on-surface-variant); line-height:1.6; }
+
+/* ── PRICING ── */
+.pricing { background:var(--md-surface-container-low); }
+.pricing-grid {
+  display:grid; grid-template-columns:1.1fr 1fr; gap:24px; margin-top:48px; align-items:start;
+}
+.price-card {
+  background:var(--md-surface-container-lowest);
+  border:1px solid var(--md-outline-variant);
+  border-radius:var(--shape-xl); padding:36px;
+  box-shadow:var(--elev-2);
+}
+.pop-chip {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--md-tertiary-container); color:var(--md-on-tertiary-container);
+  font-family:'Google Sans',sans-serif; font-size:.75rem; font-weight:500;
+  padding:4px 12px; border-radius:var(--shape-full); margin-bottom:18px;
+}
+.p-label { font-family:'Google Sans',sans-serif; font-size:.875rem; color:var(--md-on-surface-variant); margin-bottom:6px; }
+.p-amount {
+  font-family:'Google Sans Display',sans-serif;
+  font-size:3rem; font-weight:700; color:var(--md-primary); line-height:1;
+}
+.p-amount sup { font-size:1.25rem; vertical-align:super; }
+.p-after { font-size:.84rem; color:var(--md-on-surface-variant); margin-top:6px; margin-bottom:24px; }
+.p-divider { height:1px; background:var(--md-outline-variant); margin:18px 0; }
+.p-rows { list-style:none; }
+.p-rows li {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 0; font-size:.875rem;
+  border-bottom:1px solid var(--md-surface-container);
+}
+.p-rows li:last-child { border-bottom:none; }
+.p-rows .lbl { color:var(--md-on-surface-variant); }
+.p-rows .val { font-weight:500; color:var(--md-on-surface); }
+.p-rows .val.save { color:var(--md-tertiary); }
+.p-rows .val.tot { color:var(--md-primary); font-family:'Google Sans',sans-serif; font-size:1.05rem; font-weight:700; }
+.p-btn {
+  display:block; width:100%; margin-top:22px;
+  background:var(--md-primary); color:var(--md-on-primary);
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.9375rem;
+  padding:13px; border-radius:var(--shape-full); border:none;
+  cursor:pointer; text-align:center; text-decoration:none;
+  transition:filter .2s, box-shadow .2s;
+}
+.p-btn:hover { filter:brightness(1.1); box-shadow:var(--elev-2); }
+
+.price-details { display:flex; flex-direction:column; gap:14px; }
+.dc {
+  background:var(--md-surface-container-lowest);
+  border:1px solid var(--md-outline-variant); border-radius:var(--shape-lg);
+  padding:20px 22px; box-shadow:var(--elev-1); transition:border-color .2s;
+}
+.dc:hover { border-color:var(--md-primary); }
+.dc h4 {
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.875rem;
+  color:var(--md-primary); margin-bottom:10px; display:flex; align-items:center; gap:7px;
+}
+.dc p { font-size:.84rem; color:var(--md-on-surface-variant); line-height:1.65; }
+.pay-list { list-style:none; display:flex; flex-direction:column; gap:7px; }
+.pay-list li { display:flex; align-items:center; gap:10px; font-size:.84rem; color:var(--md-on-surface-variant); }
+.pct {
+  background:var(--md-primary-container); color:var(--md-on-primary-container);
+  font-family:'Google Sans',sans-serif; font-size:.72rem; font-weight:600;
+  padding:2px 10px; border-radius:var(--shape-full); min-width:38px; text-align:center; flex-shrink:0;
+}
+
+/* ── WARRANTY ── */
+.warranty { background:var(--md-surface-container-lowest); }
+.w-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:48px; }
+.wc {
+  border-radius:var(--shape-xl); padding:36px 26px; text-align:center;
+  border:1px solid transparent;
+  box-shadow:var(--elev-1); transition:box-shadow .25s, transform .25s;
+}
+.wc:hover { box-shadow:var(--elev-3); transform:translateY(-4px); }
+.wc.t1 { background:var(--md-primary-container); }
+.wc.t2 { background:var(--md-secondary-container); }
+.wc.t3 { background:var(--md-tertiary-container); }
+.wy {
+  font-family:'Google Sans Display',sans-serif;
+  font-size:4rem; font-weight:700; line-height:1; letter-spacing:-.02em;
+}
+.t1 .wy { color:var(--md-primary); }
+.t2 .wy { color:var(--md-secondary); }
+.t3 .wy { color:var(--md-tertiary); }
+.wu { font-size:.78rem; color:var(--md-on-surface-variant); margin:6px 0 16px; }
+.wn { font-family:'Google Sans',sans-serif; font-size:1rem; font-weight:600; color:var(--md-on-surface); margin-bottom:8px; }
+.wd { font-size:.82rem; color:var(--md-on-surface-variant); line-height:1.6; }
+
+/* ── COMPONENTS ── */
+.components { background:var(--md-surface-container-low); }
+.ctable {
+  width:100%; border-collapse:separate; border-spacing:0;
+  margin-top:40px; border-radius:var(--shape-xl); overflow:hidden;
+  box-shadow:var(--elev-1); border:1px solid var(--md-outline-variant);
+}
+.ctable thead tr { background:var(--md-surface-container-high); }
+.ctable th {
+  padding:14px 20px; text-align:left;
+  font-family:'Google Sans',sans-serif; font-size:.76rem; font-weight:500;
+  color:var(--md-on-surface-variant); letter-spacing:.07em; text-transform:uppercase;
+}
+.ctable tbody tr { background:var(--md-surface-container-lowest); transition:background .15s; }
+.ctable tbody tr:hover { background:var(--md-surface-container-low); }
+.ctable td {
+  padding:14px 20px; font-size:.875rem; color:var(--md-on-surface);
+  border-bottom:1px solid var(--md-outline-variant);
+}
+.ctable tbody tr:last-child td { border-bottom:none; }
+.ctable td:first-child { font-size:.75rem; color:var(--md-on-surface-variant); font-weight:500; width:36px; }
+.ctable td:nth-child(2) { font-weight:500; }
+
+/* ── CTA BAND ── */
+.cta-band {
+  background:var(--md-primary); padding:80px; text-align:center;
+}
+.cta-band h2 {
+  font-family:'Google Sans Display',sans-serif;
+  font-size:clamp(1.7rem,3vw,2.5rem); font-weight:700;
+  color:var(--md-on-primary); margin-bottom:12px; letter-spacing:-.01em;
+}
+.cta-band p { color:rgba(255,255,255,.82); font-size:1.0625rem; margin-bottom:30px; }
+.btn-inv {
+  background:var(--md-on-primary); color:var(--md-primary);
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.9375rem;
+  padding:13px 36px; border-radius:var(--shape-full); border:none;
+  cursor:pointer; text-decoration:none; display:inline-block;
+  transition:box-shadow .2s;
+}
+.btn-inv:hover { box-shadow:0 4px 16px rgba(0,0,0,.22); }
+
+/* ── CONTACT ── */
+.contact { background:var(--md-surface-container-low); }
+.contact-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:36px; margin-top:48px; }
+.c-info { display:flex; flex-direction:column; gap:12px; }
+.ci {
+  background:var(--md-surface-container-lowest);
+  border:1px solid var(--md-outline-variant); border-radius:var(--shape-lg);
+  padding:18px 20px; display:flex; gap:14px; align-items:flex-start;
+  box-shadow:var(--elev-1); transition:border-color .2s;
+}
+.ci:hover { border-color:var(--md-primary); }
+.ci-icon {
+  width:40px; height:40px; border-radius:var(--shape-md);
+  background:var(--md-primary-container);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem; flex-shrink:0;
+}
+.ci h5 {
+  font-family:'Google Sans',sans-serif; font-size:.72rem; font-weight:500;
+  color:var(--md-on-surface-variant); text-transform:uppercase; letter-spacing:.06em; margin-bottom:3px;
+}
+.ci p, .ci a { font-size:.875rem; color:var(--md-on-surface); text-decoration:none; line-height:1.55; }
+.ci a:hover { color:var(--md-primary); }
+
+.cf {
+  background:var(--md-surface-container-lowest);
+  border:1px solid var(--md-outline-variant); border-radius:var(--shape-xl);
+  padding:34px; box-shadow:var(--elev-2);
+}
+.cf h3 {
+  font-family:'Google Sans Display',sans-serif; font-size:1.25rem; font-weight:700;
+  color:var(--md-on-surface); margin-bottom:22px;
+}
+.frow { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+.fg { display:flex; flex-direction:column; gap:5px; margin-bottom:13px; }
+.fg label {
+  font-family:'Google Sans',sans-serif; font-size:.76rem; font-weight:500;
+  color:var(--md-on-surface-variant); letter-spacing:.02em;
+}
+.fg input, .fg select, .fg textarea {
+  background:var(--md-surface-container);
+  border:1px solid var(--md-outline-variant); border-radius:var(--shape-md);
+  padding:11px 15px; color:var(--md-on-surface);
+  font-family:'Roboto',sans-serif; font-size:.9rem; outline:none;
+  transition:border-color .2s, background .2s; width:100%;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color:var(--md-primary); background:var(--md-surface-container-lowest);
+}
+.fg textarea { resize:vertical; min-height:90px; }
+.fg select option { background:var(--md-surface-container-lowest); }
+.f-btn {
+  width:100%; padding:13px;
+  background:var(--md-primary); color:var(--md-on-primary);
+  font-family:'Google Sans',sans-serif; font-weight:500; font-size:.9375rem;
+  border:none; border-radius:var(--shape-full); cursor:pointer; margin-top:4px;
+  transition:filter .2s, box-shadow .2s;
+}
+.f-btn:hover { filter:brightness(1.1); box-shadow:var(--elev-2); }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--md-inverse-surface);
+  color:var(--md-inverse-on-surface); padding:52px 80px 28px;
+}
+.footer-grid {
+  display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:36px; margin-bottom:44px;
+}
+.fb .logo { color:var(--md-inverse-on-surface); margin-bottom:14px; display:inline-flex; }
+.fb .logo-icon { background:var(--md-primary-container); }
+.fb .logo em { color:var(--md-inverse-primary); }
+.fb p { font-size:.875rem; color:rgba(250,240,228,.55); line-height:1.7; }
+.fc h6 {
+  font-family:'Google Sans',sans-serif; font-size:.76rem; font-weight:500;
+  color:var(--md-inverse-primary); letter-spacing:.09em; text-transform:uppercase; margin-bottom:14px;
+}
+.fc ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
+.fc ul li a { font-size:.875rem; color:rgba(250,240,228,.55); text-decoration:none; transition:color .2s; }
+.fc ul li a:hover { color:var(--md-inverse-on-surface); }
+.f-div { height:1px; background:rgba(255,255,255,.1); margin-bottom:22px; }
+.f-bot {
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+  font-size:.8rem; color:rgba(250,240,228,.45);
+}
+.gst {
+  background:rgba(255,185,81,.14); color:var(--md-inverse-primary);
+  border:1px solid rgba(255,185,81,.22);
+  padding:3px 11px; border-radius:var(--shape-full);
+  font-size:.73rem; font-weight:500;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav { padding:0 16px; }
+  .nav-links { display:none; }
+  section { padding:64px 24px; }
+  .hero { grid-template-columns:1fr; padding:96px 24px 48px; gap:32px; }
+  .hero::before { width:280px; height:280px; top:-80px; right:-80px; }
+  .hero-visual { order:-1; }
+  .benefits-grid { grid-template-columns:1fr 1fr; }
+  .steps { grid-template-columns:1fr 1fr; gap:24px; }
+  .steps::before { display:none; }
+  .pricing-grid { grid-template-columns:1fr; }
+  .w-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .frow { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .f-bot { flex-direction:column; text-align:center; }
+  .cta-band { padding:64px 24px; }
+  .hero-stats { flex-direction:column; }
+  .hs { border-right:none; border-bottom:1px solid var(--md-outline-variant); }
+  .hs:last-child { border-bottom:none; }
+  footer { padding:44px 24px 22px; }
+}
+@media(max-width:600px){
+  .benefits-grid { grid-template-columns:1fr; }
+  .steps { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; }
+  .hv-row { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">☀️</div>
+    ACH&nbsp;<em>Solar</em>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#benefits">Why Solar</a></li>
+    <li><a href="#how">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#warranty">Warranty</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#enquiry-form" class="nav-cta">Get Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-chip"><div class="chip-dot"></div>Pune's Trusted Solar EPC Partner</div>
+    <h1>Clean solar energy<br>from your <span class="accent">rooftop</span></h1>
+    <p>ACH Solar installs premium on-grid rooftop solar systems across Pune — with government subsidy, full EPC service, net metering, and industry-best warranties.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-filled">Get Free Site Survey</a>
+      <a href="#pricing" class="btn-tonal">View Pricing</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-n">27yr</div><div class="hs-l">Panel Warranty</div></div>
+      <div class="hs"><div class="hs-n">6–8wk</div><div class="hs-l">Install Timeline</div></div>
+      <div class="hs"><div class="hs-n">₹78,000</div><div class="hs-l">Govt. Subsidy</div></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hv-main">
+      <div class="hv-main-icon">🌤️</div>
+      <h3>1 KW Rooftop System</h3>
+      <p>Starting at ₹49,999 after subsidy</p>
+    </div>
+    <div class="hv-row">
+      <div class="hv-mini">
+        <div class="mi">⚡</div>
+        <h4>Net Metering</h4>
+        <p>Sell surplus power back to the MSEDCL grid and earn credits</p>
+      </div>
+      <div class="hv-mini">
+        <div class="mi">🏛️</div>
+        <h4>MNRE Subsidy</h4>
+        <p>Credit transferred directly to your bank account by PFMS, GOI</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits" id="benefits">
+  <div class="eyebrow">Why Go Solar</div>
+  <div class="stitle">Built for Pune rooftops.<br>Backed by quality.</div>
+  <div class="ssub">From government projects to residential homes — ACH Solar delivers reliable solar with zero compromise on materials or workmanship.</div>
+  <div class="benefits-grid">
+    <div class="bc"><div class="bc-icon">💰</div><h3>Reduce electricity bills</h3><p>Generate your own power and cut monthly MSEDCL costs from the very first month of operation.</p></div>
+    <div class="bc"><div class="bc-icon">🏛️</div><h3>Government subsidy</h3><p>We handle all MNRE paperwork. Subsidy is credited directly to your bank account by PFMS, GOI.</p></div>
+    <div class="bc"><div class="bc-icon">⚡</div><h3>Net metering ready</h3><p>Feed excess energy back to the grid. We manage the complete MSEDCL net metering process end-to-end.</p></div>
+    <div class="bc"><div class="bc-icon">🛡️</div><h3>Premium components</h3><p>Growatt/Havells inverters, Polycab cables, proven PV modules — every part selected for a long, trouble-free life.</p></div>
+    <div class="bc"><div class="bc-icon">🔧</div><h3>End-to-end EPC</h3><p>Survey, design, procurement, installation, commissioning — we own every step so you don't coordinate vendors.</p></div>
+    <div class="bc"><div class="bc-icon">🌱</div><h3>Clean energy future</h3><p>Reduce your carbon footprint and join thousands of Pune households making the switch to renewable energy.</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="eyebrow">Simple Process</div>
+  <div class="stitle">From survey to savings<br>in 6–8 weeks</div>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><h4>Free Site Survey</h4><p>Engineers assess rooftop, shading, and energy consumption at no cost.</p></div>
+    <div class="step"><div class="step-n">2</div><h4>Design & Quote</h4><p>Custom system design with detailed pricing and subsidy calculation.</p></div>
+    <div class="step"><div class="step-n">3</div><h4>Installation</h4><p>Expert team installs panels, inverter, cables and earthing per DISCOM norms.</p></div>
+    <div class="step"><div class="step-n">4</div><h4>Net Meter & Subsidy</h4><p>We handle MSEDCL net metering registration and all MNRE subsidy documents.</p></div>
+    <div class="step"><div class="step-n">5</div><h4>Start Saving!</h4><p>System goes live. Watch your electricity bill drop every single month.</p></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="eyebrow">Commercial Offer</div>
+  <div class="stitle">Transparent pricing,<br>no hidden costs</div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="pop-chip">⭐ Most Popular Package</div>
+      <div class="p-label">3.3 KW · Single Phase · Rooftop</div>
+      <div class="p-amount"><sup>₹</sup>1,34,355</div>
+      <div class="p-after">After MNRE government subsidy of ₹78,000</div>
+      <ul class="p-rows">
+        <li><span class="lbl">Base price</span><span class="val">₹1,95,000</span></li>
+        <li><span class="lbl">Material (70%) + 5% GST</span><span class="val">₹1,43,325</span></li>
+        <li><span class="lbl">EPC cost (30%) + 18% GST</span><span class="val">₹69,030</span></li>
+        <li><span class="lbl">Total with GST</span><span class="val">₹2,12,355</span></li>
+        <li><span class="lbl">Govt. subsidy credit</span><span class="val save">– ₹78,000</span></li>
+        <li><span class="lbl">Your investment</span><span class="val tot">₹1,34,355</span></li>
+      </ul>
+      <a href="#contact" class="p-btn">Book now — get free survey</a>
+    </div>
+
+    <div class="price-details">
+      <div class="dc">
+        <h4>📋 Payment schedule</h4>
+        <ul class="pay-list">
+          <li><span class="pct">20%</span>Advance with Letter of Acceptance</li>
+          <li><span class="pct">60%</span>After project sanction</li>
+          <li><span class="pct">10%</span>After work completion</li>
+          <li><span class="pct">10%</span>After net meter installation</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <h4>📦 What's included</h4>
+        <p>Complete supply, installation, and commissioning — PV modules, inverter, cables, earthing, lightning arrestors, structures, walkway, and MSEDCL net metering.</p>
+      </div>
+      <div class="dc">
+        <h4>ℹ️ Subsidy note</h4>
+        <p>Subsidy is per current MNRE guidelines and credited directly to your bank account by PFMS, GOI. Documents are submitted after 100% project completion and final payment.</p>
+      </div>
+      <div class="dc">
+        <h4>🚚 Delivery & insurance</h4>
+        <p>Price is delivery-at-site. Transit insurance is covered by ACH Solar. GST is charged extra as applicable at time of dispatch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARRANTY -->
+<section class="warranty" id="warranty">
+  <div class="eyebrow">Peace of Mind</div>
+  <div class="stitle">Industry-best warranties<br>on every component</div>
+  <div class="ssub">All manufacturer warranties are passed through directly to you. Extended warranties available at additional cost.</div>
+  <div class="w-grid">
+    <div class="wc t1">
+      <div class="wy">27</div>
+      <div class="wu">Years power output guarantee</div>
+      <div class="wn">Solar PV Modules</div>
+      <div class="wd">12-year product warranty + 27-year power output performance guarantee from the manufacturer.</div>
+    </div>
+    <div class="wc t2">
+      <div class="wy">10</div>
+      <div class="wu">Years full coverage</div>
+      <div class="wn">Inverters (Havens)</div>
+      <div class="wd">Full 10-year inverter warranty from Havens — one of the world's leading solar inverter brands.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section class="components" id="components">
+  <div class="eyebrow">Equipment List</div>
+  <div class="stitle">Premium components,<br>trusted brands</div>
+  <table class="ctable">
+    <thead>
+      <tr><th>#</th><th>Equipment</th><th>Brand / Specification</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>01</td><td>Solar PV Modules</td><td>540 WP × 6 Nos</td></tr>
+      <tr><td>02</td><td>On-Grid String Inverters</td><td>Growatt / Havells — 3.3 KW, Single Phase</td></tr>
+      <tr><td>03</td><td>DC Solar Cable</td><td>Waacab / Polycab</td></tr>
+      <tr><td>04</td><td>AC Cable</td><td>Polycab — 4 Core × 25/35 sqmm, Aluminium Armoured</td></tr>
+      <tr><td>05</td><td>Earthing System</td><td>Standard as per DISCOM guidelines</td></tr>
+      <tr><td>06</td><td>Lightning Arrestor</td><td>Conventional</td></tr>
+      <tr><td>07</td><td>MC4 Connectors</td><td>Elmax / Waaree</td></tr>
+      <tr><td>08</td><td>Mounting Structure</td><td>Aluminium short rail for tin roof</td></tr>
+      <tr><td>09</td><td>Other Miscellaneous</td><td>Standard make</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Ready to go solar?<br>Let's talk.</h2>
+  <p>Get a free site assessment and custom quote from our experts. No obligations.</p>
+  <a href="#contact" class="btn-inv">Request free consultation →</a>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="eyebrow">Get in Touch</div>
+  <div class="stitle">Start your solar journey</div>
+  <div class="contact-grid">
+    <div class="c-info">
+      <div class="ci">
+        <div class="ci-icon">📍</div>
+        <div><h5>Our Office</h5><p>Shop No-03, Sai Raj Apartment,<br>Katraj, Pune – 411046</p></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">📞</div>
+        <div><h5>Phone</h5><a href="tel:+917030376995">+91 70303 76995</a></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">📧</div>
+        <div><h5>Email</h5><a href="mailto:achsolarserviceskatraj@gmail.com">achsolarserviceskatraj@gmail.com</a></div>
+      </div>
+
+    </div>
+
+    <div class="cf" id="enquiry-form">
+      <h3>Request a free quote</h3>
+
+      <!-- Hidden iframe to absorb Google Form redirect -->
+      <iframe name="gform-target" style="display:none;"></iframe>
+
+      <div id="form-success" style="display:none; text-align:center; padding:32px 0;">
+        <div style="font-size:2.8rem; margin-bottom:14px;">✅</div>
+        <div style="font-family:'Google Sans',sans-serif; font-size:1.1rem; font-weight:600; color:var(--md-primary); margin-bottom:8px;">Enquiry sent successfully!</div>
+        <div style="font-size:.875rem; color:var(--md-on-surface-variant);">Our team will contact you within 24 hours.</div>
+      </div>
+
+      <div id="form-fields">
+        <div class="frow">
+          <div class="fg"><label>Full Name</label><input id="f-name" type="text" placeholder="Your name"></div>
+          <div class="fg"><label>Phone Number</label><input id="f-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        </div>
+        <div class="fg"><label>Email Address</label><input id="f-email" type="email" placeholder="you@example.com"></div>
+        <div class="frow">
+          <div class="fg">
+            <label>System Size</label>
+            <select id="f-size">
+              <option value="">Select size</option>
+              <option>1 KW</option>
+              <option>2 KW</option>
+              <option>3 KW</option>
+              <option>5 KW</option>
+              <option>10+ KW</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Property Type</label>
+            <select id="f-type">
+              <option value="">Select type</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Industrial</option>
+              <option>Government</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Message (Optional)</label><textarea id="f-message" placeholder="Tell us about your energy needs…"></textarea></div>
+        <button class="f-btn" onclick="submitToGoogleForm()">Send enquiry</button>
+      </div>
+    </div>
+
+    <script>
+    function submitToGoogleForm() {
+      const name    = document.getElementById('f-name').value.trim();
+      const phone   = document.getElementById('f-phone').value.trim();
+      const email   = document.getElementById('f-email').value.trim();
+      const size    = document.getElementById('f-size').value;
+      const type    = document.getElementById('f-type').value;
+      const message = document.getElementById('f-message').value.trim();
+
+      if (!name || !phone) {
+        alert('Please fill in at least your Full Name and Phone Number.');
+        return;
+      }
+
+      const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScIKoQM6wwCWOJ7Vu2d0_BfOdsUsGWo8IP08tz5wKzu8EejRw/formResponse';
+
+      const params = new URLSearchParams({
+        'entry.132186083':  name,
+        'entry.1821727889': phone,
+        'entry.1492445425': email,
+        'entry.822851840':  size,
+        'entry.1894617341': type,
+        'entry.2093264086': message
+      });
+
+      // Submit silently via hidden iframe (avoids CORS redirect)
+      const iframe = document.querySelector('iframe[name="gform-target"]');
+      const tempForm = document.createElement('form');
+      tempForm.method = 'POST';
+      tempForm.action = FORM_ACTION;
+      tempForm.target = 'gform-target';
+      tempForm.style.display = 'none';
+
+      params.forEach((val, key) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = val;
+        tempForm.appendChild(input);
+      });
+
+      document.body.appendChild(tempForm);
+      tempForm.submit();
+      document.body.removeChild(tempForm);
+
+      // Show success state
+      document.getElementById('form-fields').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+    </script>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="fb">
+      <a href="#" class="logo">
+        <div class="logo-icon">☀️</div>
+        ACH&nbsp;<em>Solar</em>
+      </a>
+      <p>Pune's trusted solar EPC partner. Delivering clean, reliable rooftop solar with no compromise on quality or service.</p>
+    </div>
+    <div class="fc">
+      <h6>Services</h6>
+      <ul>
+        <li><a href="#">Rooftop Solar</a></li>
+        <li><a href="#">Solar Water Heater</a></li>
+        <li><a href="#">Net Metering</a></li>
+        <li><a href="#">O&amp;M Services</a></li>
+        <li><a href="#">Subsidy Assistance</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h6>Quick Links</h6>
+      <ul>
+        <li><a href="#benefits">Why Solar</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#warranty">Warranty</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h6>Contact</h6>
+      <ul>
+        <li><a href="tel:+917030376995">+91 70303 76995</a></li>
+        <li><a href="mailto:achsolarserviceskatraj@gmail.com">achsolarserviceskatraj@gmail.com</a></li>
+        <li><a href="#">Katraj, Pune – 411046</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-div"></div>
+  <div class="f-bot">
+    <span>© 2025 ACH Solar Services. All rights reserved. &nbsp;<span class="gst">GST: 27CPKPR6711L1ZA</span></span>
+    <span>Made with ☀️ for a greener Pune</span>
+  </div>
+</footer>
+
+</body>
+</html>
